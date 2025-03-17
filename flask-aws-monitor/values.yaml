@@ -1,0 +1,28 @@
+replicaCount: 2
+
+image:
+  repository: olego700/flask-aws-monitor
+  tag: "latest"
+  pullPolicy: IfNotPresent
+
+service:
+  type: LoadBalancer
+  port: 80
+  targetPort: 5001  
+
+resources:
+  requests:
+    memory: "128Mi"
+    cpu: "100m"
+  limits:
+    memory: "256Mi"
+    cpu: "200m"
+
+env:
+  flaskEnv: "production"
+  awsAccessKeyId: "AKIAXLEKZJVVSTPGSZ6O"  
+  awsSecretAccessKey: "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"  
+
+ingress:
+  enabled: true
+  host: "aa7eb1eb6198f425a9e33bd769484d4a-983264415.eu-west-1.elb.amazonaws.com"

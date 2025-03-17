@@ -22,9 +22,7 @@ COPY --from=builder /app/app.py ./
 # expose 5001 for the app
 EXPOSE 5001
 
-# set variables for aws
-ENV AWS_ACCESS_KEY_ID=AKIAXLEKZJVVSTPGSZ6O
-ENV AWS_SECRET_ACCESS_KEY=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
+
 
 # Run the application
 CMD ["python", "app.py"]

@@ -1,3 +1,3 @@
 # DevOps Final Exam
-##app is the python app
-##flask-aws-monitor is the helm chart
+- app is the python 
+- appflask-aws-monitor is the helm chart

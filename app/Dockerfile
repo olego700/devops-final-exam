@@ -22,6 +22,5 @@ COPY --from=builder /app/app.py ./
 # expose 5001 for the app
 EXPOSE 5001
 
-g
 # Run the application
 CMD ["python", "app.py"]
